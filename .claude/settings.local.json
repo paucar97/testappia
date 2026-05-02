@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(winget install *)",
+      "Bash(cmd /c winget install --id GitHub.cli --accept-source-agreements --accept-package-agreements)",
+      "Bash(cmd /c where winget)",
+      "Bash(cmd /c choco --version)",
+      "Bash(cmd /c scoop --version)",
+      "Bash(curl --version)",
+      "Bash(curl -s https://api.github.com/repos/cli/cli/releases/latest)",
+      "Bash(curl -L -o /tmp/gh_installer.msi \"https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_windows_amd64.msi\")",
+      "Bash(msiexec /i \"C:\\\\tmp\\\\gh_installer.msi\" /quiet /norestart)",
+      "Bash(curl -L -o /tmp/gh.zip \"https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_windows_amd64.zip\")",
+      "Bash(unzip -o /tmp/gh.zip -d /tmp/gh_cli)",
+      "Bash(mkdir -p \"/c/Users/karlo/bin\")",
+      "Bash(cp /tmp/gh_cli/bin/gh.exe \"/c/Users/karlo/bin/gh.exe\")",
+      "Bash(export PATH=\"$PATH:/c/Users/karlo/bin\")",
+      "Bash(gh --version)",
+      "Bash(gh auth *)",
+      "Bash(gh repo *)"
+    ]
+  }
+}
